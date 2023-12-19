@@ -1,10 +1,16 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
   <title>Zielseite</title>
 </head>
 <body>
-  <h1>Willkommen, <b>{{ name }}</b>!</h1>
+  <script>
+    // Die Variable `name` aus dem Index-Formular importieren
+    const name = document.querySelector("input[name='eingabe']").value;
+
+    // Den Namen ausgeben
+    document.querySelector("h1").textContent = `Willkommen, ${name}!`;
+  </script>
 </body>
 </html>
