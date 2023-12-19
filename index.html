@@ -1,16 +1,19 @@
-<!DOCTYPE html>
-<html lang="de">
+<!-- Zweiter HTML-Code: Begrüßung mit dem Namen -->
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Zielseite</title>
-</head>
-<body>
   <script>
-    // Die Variable `name` aus dem Index-Formular importieren
-    const name = document.querySelector("input[name='eingabe']").value.toLowerCase();
-
-    // Den Namen ausgeben
-    document.querySelector("h1").textContent = `Willkommen, ${name}!`;
+    // Diese Funktion wird aufgerufen, wenn die Seite geladen wird
+    function showName() {
+      // Hole den Namen aus der URL
+      var url = window.location.href;
+      var name = url.split("=")[1];
+      // Zeige die Begrüßung mit dem Namen an
+      document.getElementById("greeting").innerHTML = "Wilkommen, " + name + "!";
+    }
   </script>
+</head>
+<body onload="showName()">
+  <h1>Du bist auf der anderen Seite</h1>
+  <p id="greeting"></p>
 </body>
 </html>
