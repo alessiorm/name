@@ -7,7 +7,7 @@
 <body>
   <script>
     // Die Variable `name` aus dem Index-Formular importieren
-    const name = document.querySelector("input[name='eingabe']").value;
+    const name = document.querySelector("input[name='eingabe']").value.toLowerCase();
 
     // Den Namen ausgeben
     document.querySelector("h1").textContent = `Willkommen, ${name}!`;
