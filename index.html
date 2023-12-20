@@ -3,12 +3,12 @@
   <script>
     // Diese Funktion wird aufgerufen, wenn die Seite geladen wird
     function showName() {
-      // Hole den Namen aus der URL
+      // Hole den Namen aus der URL und konvertiere ihn in Kleinbuchstaben
       var url = window.location.href;
-      var name = url.split("=")[1];
+      var name = url.split("=")[1].toLowerCase();
       // Zeige die Begrüßung mit dem Namen an
       document.getElementById("greeting").innerHTML = "Wilkommen, " + name + "!";
-      // Ändere die URL zu der gewünschten Seite
+      // Ändere die URL zu der gewünschten Seite, übergebe den Namen in Kleinbuchstaben
       window.location.href = "https://sites.google.com/view/acportuguesespanol/startseite/" + name;
     }
   </script>
